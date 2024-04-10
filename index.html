@@ -17,6 +17,12 @@
           <li><a href="#">EVEN MORE FOOD</a></li>
         </ul>
       </nav>
+      <div class="container">
+        <h1>Recipe Search</h1>
+        <input type="text" id="searchInput" placeholder="Enter keyword...">
+        <button onclick="searchRecipes()">Search</button>
+        <div id="recipeResults"></div>
+    </div>
       <nav id="hamburger-nav">
         <div class="logo">EzChefs</div>
         <div class="hamburger-menu">
@@ -37,6 +43,13 @@
         </div>
       </nav>
     </header>
+    <div 
+    id="recipeContainer"
+    class="recipe-container">  
+    </div> <!-- Container for recipes -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content" id="modalContent"></div>
+  </div>
 
     <script src="assets/script.js"></script>
   </body>
