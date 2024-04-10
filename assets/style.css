@@ -1,0 +1,75 @@
+/* Hamburger-Menu */
+/* Base styles for the hamburger menu container */
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+/* Style for the hamburger icon itself */
+.hamburger-icon {
+ display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+/* Universal style for each line in the hamburger icon */
+.hamburger-icon span {
+    display: block;
+    height: 3px; /* Adjust height as needed */
+    background-color: black; /* Color of the spans, make sure it's visible against the background */
+    margin: 5px 0; /* Space between the spans */
+    transition: all 0.3s ease-in-out; /* Smooth transition for any transformations */
+    
+}
+/* Style for the dropdown menu */
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: black;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+/* Transformations for the icon spans in the open state */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+/* Nav Bar At the Top of Screen */
+nav, .nav-links, #hamburger-nav {
+    display: flex;
+  }
+  
+  nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+  }
+  
+  .nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--hover-text-color);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+  }
+  

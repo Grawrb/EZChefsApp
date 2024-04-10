@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EzChefs</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- This is the nav bar at the top -->
+    <header>
+      <nav id="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="#">Food</a></li>
+          <li><a href="#">More Food</a></li>
+          <li><a href="#">Even More Food</a></li>
+          <li><a href="#">EVEN MORE FOOD</a></li>
+        </ul>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">EzChefs</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleHamburgerMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <ul>
+              <!-- When hamburger menu is called, theses are the drop down, feel free to delete the unused one or add more-->
+              <li><a href="#" onclick="toggleHamburgerMenu()">?</a></li>
+              <li><a href="#" onclick="toggleHamburgerMenu()">?</a></li>
+              <li><a href="#" onclick="toggleHamburgerMenu()">?</a></li>
+              <li><a href="#" onclick="toggleHamburgerMenu()">?</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
