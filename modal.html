@@ -1,5 +1,5 @@
 <div class="login">
-    <form name='form-login'>
+    <form name='form-signup'>
 
         <h1>Let's get cooking!</h1>
 
@@ -9,35 +9,31 @@
         <label for="pw">Password</label>
         <input type="password" id= "pw" placeholder="Password" required>
         <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
-        <div id="remember">
-            <input type="checkbox" value="lsRememberMe" id="rememberMe"
-                   style="display: inline-block;">
-            <label>Remember me</label>
-        </div>
+        
 
     </form>
-</div>
-
-<div class="login">
     <form name='form-login'>
 
-        <h1>SIGN IN</h1>
+        <h1>Returning Chefs</h1>
 
         <label for="userName">Email</label>
         <input type="email" id="userName" placeholder="Email" required>
 
         <label for="userPw">Password</label>
         <input type="password" id= "userPw" placeholder="Password" required>
-
+        <div id="remember">
+            <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                   style="display: inline-block;">
+            <label>Remember me</label>
+        </div>
         
-
         <input id= "login_btn" type="submit" value="Login" onclick="check()">
 
     </form>
 </div>
 <script>
-    function store(){
 
+    function store(){
 var name = document.getElementById('name');
 var pw = document.getElementById('pw');
 
