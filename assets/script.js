@@ -65,5 +65,5 @@ function displayRecipeDetails(recipe) {
   modal.style.display = 'block';
 
 
-console.log("modalContent", modalContent)
+// console.log("modalContent", modalContent)
 }
