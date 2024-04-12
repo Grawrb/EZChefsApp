@@ -21,6 +21,49 @@
         <li><a href="Scanner.html">Scanner</a></li>
       </ul>
     </div>
+    <!-- This is the nav bar at the top -->
+    <header>
+      <nav id="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="#">Food</a></li>
+          <li><a href="#">More Food</a></li>
+          <li><a href="#">Even More Food</a></li>
+          <li><a href="#">EVEN MORE FOOD</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <h1>Recipe Search</h1>
+        <input type="text" id="searchInput" placeholder="Enter keyword...">
+        <button onclick="searchRecipes()">Search</button>
+        <div id="recipeResults"></div>
+    </div>
+      <nav id="hamburger-nav">
+        <div class="logo">EzChefs</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleHamburgerMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <ul>
+              <!-- When hamburger menu is called, theses are the drop down, feel free to delete the unused one or add more-->
+              <li><a href="#" onclick="toggleHamburgerMenu()">?</a></li>
+              <li><a href="#" onclick="toggleHamburgerMenu()">?</a></li>
+              <li><a href="#" onclick="toggleHamburgerMenu()">?</a></li>
+              <li><a href="#" onclick="toggleHamburgerMenu()">?</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div 
+    id="recipeContainer"
+    class="recipe-container">  
+    </div> <!-- Container for recipes -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content" id="modalContent"></div>
+  </div>
 
     <nav>
       <div class="ez-logo">EZ CHEF</div>
