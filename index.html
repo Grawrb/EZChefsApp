@@ -3,50 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/CSS/style.css" />
     <title>EZ Chef</title>
-    <div class="container">
-      <div class="username-display">
-        Welcome to your pantry, <span id="username">Guest</span>!
-      </div>
-    </div>
-  </head>
-  <body>
-    <div class="off-screen-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="RV.html">Recipe Viewer</a></li>
-        <li><a href="Recents.html">Recents</a></li>
-        <li><a href="Inventory.html">Inventory</a></li>
-        <li><a href="Scanner.html">Scanner</a></li>
-      </ul>
-    </div>
-    
-      <div class="container">
-        <h1>Recipe Search</h1>
-        <input type="text" id="searchInput" placeholder="Enter keyword...">
-        <button onclick="searchRecipes()">Search</button>
-        <div id="recipeResults"></div>
-    </div>
-      
-    <div 
-    id="recipeContainer"
-    class="recipe-container">  
-    </div> <!-- Container for recipes -->
-    <div id="recipeModal" class="modal">
-      <div class="modal-content" id="modalContent"></div>
-  </div>
 
-    <nav>
-      <div class="ez-logo">EZ CHEF</div>
-      <div class="ham-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+  </head>
+
+
+
+  <body class="max-w-screen max-h-screen">
+
+    <!-- header -->
+    <header>
+
+
+    <!-- Navigation + Hamburger Menu -->
+    <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">EZ CHEF</span>
+      </a>
+        <div class="ham-menu inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false"">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="off-screen-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="RV.html">Recipe Viewer</a></li>
+            <li><a href="Recents.html">Recents</a></li>
+            <li><a href="Inventory.html">Inventory</a></li>
+            <li><a href="Scanner.html">Scanner</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
+
+
+</header>
+    
+
+
+    <!-- Main Content area - 2- Column/Grid layout-->
+    <main class="max-h-full max-w-full px-4 columns-2 mt-6">
+
+
+      <!-- Left Column -->
+      <section class="w-full">   
+        <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Better Data</span> Scalable AI.</h1>
+        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+<figure class="max-w-full">
+  <div class="flex justify-center mb-4 text-yellow-300 ">
+      <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+      </svg>
+      <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+      </svg>
+      <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+      </svg>
+      <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+      </svg>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+      </svg>
+  </div>
+  <blockquote class="text-center">
+      <p class="text-2xl font-semibold text-green-700">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+  </blockquote>
+  <figcaption class="flex justify-center mt-6 space-x-3 rtl:space-x-reverse">
+      <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture">
+      <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-300 dark:divide-gray-700">
+          <cite class="pe-3 font-medium text-gray-900 dark:text-white">Bonnie Green</cite>
+          <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">CTO at Flowbite</cite>
+      </div>
+  </figcaption>
+</figure>
+
+    </section>
+    
+
+    <!-- Right Column-->
+      <section class="w-full">   
+
+        <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+          <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+          <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+          <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+          <div class="h-[64px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+          <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
+              <img src="./assets/images/phone-placeholder-dark.png" class="dark:hidden w-[272px] h-[572px]" alt="">
+              <img src="./assets/images/phone-placeholder.png" class="hidden dark:block w-[272px] h-[572px]" alt="">
+            </div>
+        </div>
+
+    </section>
+
+  </main>
+  
+
+    <!-- Footer -->
+  <footer class="absolute inset-x-0 bottom-0 bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">About</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline">Contact</a>
+      </li>
+  </ul>
+  </div>
+  </footer>
+
+<!--Script sources/references-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/script.js"></script>
 
     <script src="assets/JS/script.js"></script>
   </body>
