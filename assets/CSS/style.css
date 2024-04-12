@@ -1,0 +1,128 @@
+/* base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  color: #6f86ff;
+  text-align: center;
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.username-display {
+  font-size: 50px;
+}
+
+/* Start of Ham-menu */
+a {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: #6f86ff;
+}
+
+body {
+  background-color: rgb(65, 71, 97);
+  font-family: sans-serif;
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+  background-color: rgb(34, 37, 49);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: 0.3s ease;
+}
+
+.off-screen-menu a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+.off-screen-menu a:hover {
+  cursor: default;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  color: white;
+}
+
+/* nav */
+nav {
+  padding: 1rem;
+  display: flex;
+  background-color: rgb(34, 37, 49);
+}
+.ez-logo {
+  color: #6f86ff;
+  text-align: center;
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ham menu */
+.ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+}
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #6f86ff;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+.ham-menu.active span {
+  background-color: white;
+}
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(5),
+.ham-menu.active span:nth-child(4),
+.ham-menu.active span:nth-child(2) {
+  display: none;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
