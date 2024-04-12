@@ -1,43 +1,39 @@
 <div class="login">
-    <form name='form-login'>
+    <form name='form-signup'>
 
         <h1>Let's get cooking!</h1>
-
+        <p>Create your aaccount</p>
         <label for="name">Email</label>
-        <input type="email" id="name" placeholder="Username" required>
+        <input type="email" id="name" placeholder="Email" required>
 
         <label for="pw">Password</label>
         <input type="password" id= "pw" placeholder="Password" required>
         <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
+        
+
+    </form>
+    <form name='form-login'>
+
+        <h1>Returning Chefs</h1>
+        <p>Jump back into your pantry</p>
+        <label for="userName">Email</label>
+        <input type="email" id="userName" placeholder="Email" required>
+
+        <label for="userPw">Password</label>
+        <input type="password" id= "userPw" placeholder="Password" required>
         <div id="remember">
             <input type="checkbox" value="lsRememberMe" id="rememberMe"
                    style="display: inline-block;">
             <label>Remember me</label>
         </div>
-
-    </form>
-</div>
-
-<div class="login">
-    <form name='form-login'>
-
-        <h1>SIGN IN</h1>
-
-        <label for="userName">Email</label>
-        <input type="email" id="userName" placeholder="Username" required>
-
-        <label for="userPw">Password</label>
-        <input type="password" id= "userPw" placeholder="Password" required>
-
         
-
         <input id= "login_btn" type="submit" value="Login" onclick="check()">
 
     </form>
 </div>
 <script>
+//Function to store data from signup form
     function store(){
-
 var name = document.getElementById('name');
 var pw = document.getElementById('pw');
 
@@ -57,7 +53,7 @@ if(name.value.length == 0){
 }
 }
 
-//checking
+//Function to check if user has previously registered
 function check(){
 var storedName = localStorage.getItem('name');
 var storedPw = localStorage.getItem('pw');
