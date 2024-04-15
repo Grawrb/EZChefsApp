@@ -1,5 +1,8 @@
 // HamburgerMenu
-const apiKey = '1e17ed0415db427d85d0c5c8062f4434'; 
+// const apiKey = '1e17ed0415db427d85d0c5c8062f4434'; //created first
+const apiKey = 'f286733a42634bd3b713d9d90285995f'; //created second
+// apiKey from Rob
+// const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b';
 const hamMenu = document.querySelector(".ham-menu");
 const baseUrl = 'https://api.spoonacular.com/recipes/';
 
@@ -12,16 +15,16 @@ hamMenu.addEventListener("click", () => {
 
 function searchRecipes() {
   var query = document.getElementById('searchInput').value.trim();
+  var encodedQuery = encodeURIComponent(query); // Encode the search query
+
   var apiUrl;
 
-  // Check if the query contains spaces
-  var isIngredientSearch = query.includes(' ');
-
   // Construct the API URL based on the type of search
-  if (isIngredientSearch) {
-      apiUrl = `${baseUrl}findByIngredients?ingredients=${query}&apiKey=${apiKey}`;
+  if (query.includes(' ')) {
+      
+      apiUrl = `${baseUrl}complexSearch?query=${encodedQuery}&apiKey=${apiKey}&number=15`;
   } else {
-      apiUrl = `${baseUrl}complexSearch?query=${query}&apiKey=${apiKey}`;
+      apiUrl = `${baseUrl}complexSearch?query=${encodedQuery}&apiKey=${apiKey}&number=15`;
   }
 
   fetch(apiUrl)
@@ -37,28 +40,46 @@ function searchRecipes() {
       });
 }
 
+
 function displayRecipes(recipes) {
   var recipeContainer = document.getElementById('recipeContainer');
   recipeContainer.innerHTML = ''; // Clear previous recipes
 
   recipes.forEach(function(recipe) {
-      console.log("Recipe Object Keys:", Object.keys(recipe)); // Debugging: Print the keys of the recipe object to the console
-      var recipeElement = document.createElement('div');
-      recipeElement.classList.add('recipe');
-      recipeElement.innerHTML = '<h2>' + recipe.title + '</h2>' +
-                                '<img src="' + recipe.image + '" alt="' + recipe.title + '">';
+      // Fetch recipe summary
+      fetch(`${baseUrl}${recipe.id}/summary?apiKey=${apiKey}`)
+          .then(function(response) {
+              return response.json();
+          })
+          .then(function(summaryData) {
+              console.log("Recipe Summary:", summaryData);
 
-      // Check if recipe includes readyInMinutes property and it's not null or undefined
-      if (recipe.readyInMinutes != null) {
-          recipeElement.innerHTML += '<p>Ready in ' + recipe.readyInMinutes + ' minutes</p>';
-      }
+              // Create recipe element
+              var recipeElement = document.createElement('div');
+              recipeElement.classList.add('recipe');
+              recipeElement.innerHTML = '<h2>' + recipe.title + '</h2>' +
+                  '<img src="' + recipe.image + '" alt="' + recipe.title + '">' +
+                  '<p>Summary: ' + summaryData.summary + '</p>';
 
-      recipeElement.addEventListener('click', function() {
-          displayRecipeDetails(recipe);
-      });
-      recipeContainer.appendChild(recipeElement);
+              // Check if recipe includes readyInMinutes property and it's not null or undefined
+              if (recipe.readyInMinutes != null) {
+                  recipeElement.innerHTML += '<p>Ready in ' + recipe.readyInMinutes + ' minutes</p>';
+              }
+
+              // Add event listener
+              recipeElement.addEventListener('click', function() {
+                  displayRecipeDetails(recipe);
+              });
+
+              // Append recipe element to container
+              recipeContainer.appendChild(recipeElement);
+          })
+          .catch(function(error) {
+              console.error('Error fetching recipe summary:', error);
+          });
   });
 }
+
 
 
 function displayRecipeDetails(recipe) {
@@ -83,6 +104,10 @@ function displayRecipeDetails(recipe) {
           <p>Instructions:</p>
           <ul>
             ${data.instructions ? data.instructions.split('\n').map(instruction => `<li>${instruction}</li>`).join('') : ''}
+          </ul>
+          <p>Ingredients:</p>
+          <ul>
+            ${data.extendedIngredients ? data.extendedIngredients.map(ingredient => `<li>${ingredient.original}</li>`).join('') : ''}
           </ul>
       `;
 
@@ -110,6 +135,40 @@ function displayRecipeDetails(recipe) {
     });
 }
 
+function extractRecipeFromURL(url) {
+  var apiUrl = `https://api.spoonacular.com/recipes/extract?url=${url}&apiKey=${apiKey}`;
+
+  fetch(apiUrl)
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(data) {
+          console.log("Extracted Recipe Data:", data);
+          // Process the extracted recipe data as needed
+      })
+      .catch(function(error) {
+          console.error('Error extracting recipe data:', error);
+      });
+}
+
+
+// Might be a fun function for later use, but right now not necessary.
+// Function to fetch details for multiple recipes
+// function fetchRecipeDetails(recipeIds) {
+//   var apiUrl = `${baseUrl}informationBulk?ids=${recipeIds.join(',')}&apiKey=${apiKey}`;
+
+//   fetch(apiUrl)
+//     .then(function(response) {
+//       return response.json();
+//     })
+//     .then(function(data) {
+//       console.log("Recipe Details:", data); // Log the detailed recipe information for debugging
+      // Process and display the fetched recipe details as needed
+//     })
+//     .catch(function(error) {
+//       console.error('Error fetching recipe details:', error);
+//     });
+// }
 
 
 

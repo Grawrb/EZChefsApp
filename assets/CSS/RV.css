@@ -136,6 +136,7 @@ nav {
 
 .recipe {
 width: 30%; /* Adjust as needed */
+display: inline-block;
 margin: 10px; /* Adjust spacing between recipes */
 padding: 10px;
 border: 1px solid #ccc;
