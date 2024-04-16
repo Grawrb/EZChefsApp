@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/CSS/style.css" />
-    <title>EZ Chef</title>
-    <div class="container">
-      <div class="username-display">Guests, <span id="username">Recipes</span></div>
-      </div>
-    
-    </head>
-  <body>
-    <div class="off-screen-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="RV.html">Recipe Viewer</a></li>
-        <li><a href="Recents.html">Recents</a></li>
-        <li><a href="Inventory.html">Inventory</a></li>
-        <li><a href="Scanner.html">Scanner</a></li>
-      </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/CSS/RV.css" />
+  <title>EZ Chef</title>
+</head>
+<body>
+  <div class="container">
+    <div class="username-display">Guests, <span id="username">Recipes</span></div>
+  </div>
+  
+  <div class="off-screen-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="RV.html">Recipe Viewer</a></li>
+      <li><a href="Recents.html">Recents</a></li>
+      <li><a href="Inventory.html">Inventory</a></li>
+      <li><a href="Scanner.html">Scanner</a></li>
+    </ul>
+  </div>
+
+  <nav>
+    <div class="ez-logo">EZ CHEF</div>
+    <div class="ham-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </nav>
 
-    <nav>
-      <div class="ez-logo">EZ CHEF</div>
-      <div class="ham-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+  <div class="container">
+    <h3>Recipe Search</h3>
+    <input type="text" id="searchInput" placeholder="Enter keyword...">
+    <button onclick="searchRecipes()">Search</button>
+    <div id="recipeResults"></div>
+  </div>
+  
+  <div id="recipeContainer" class="recipe-container">  
+  </div> <!-- Container for recipes -->
 
-    <script src="assets/JS/script.js"></script>
-  </body>
+  <div id="recipeModal" class="modal">
+    <div class="modal-content" id="modalContent">
+      <!-- Recipe content here -->
+      <button id="closeModalBtn">&times;</button> <!-- Close button (X) -->
+    </div>
+  </div>
+
+  <script src="./assets/JS/RV.js"></script>
+</body>
 </html>
