@@ -6,15 +6,21 @@
   list-style: none;
   text-decoration: none;
 }
-
-/* .container {
+.container {
   color: #6f86ff;
   text-align: center;
   font-size: 50px;
   text-align: center;
   width: 100%;
   margin: 0 auto;
-} */
+}
+main {
+  overflow: hidden;
+}
+
+footer {
+  position: fixed;
+}
 
 .username-display {
   font-size: 50px;
@@ -48,6 +54,7 @@ a:hover {
   text-align: center;
   font-size: 3rem;
   transition: 0.3s ease;
+  
 }
 
 .off-screen-menu a {
