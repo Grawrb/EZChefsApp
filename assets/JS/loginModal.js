@@ -1,18 +1,39 @@
-//Create modal container
+let userName=document.getElementById('userName');
+let loginBtn=document.getElementById('loginBtn');
+let registerBtn = document.getElementById('registerBtn');
+
+registerBtn.addEventListener('click', createRegModal);
+loginBtn.addEventListener('click', createLoginModal);
+
+let loginModal= document.createElement('dialog');
+document.body.appendChild(loginModal);
+let text=document.createElement('h1');
+text.textContent=('Working?');
+loginModal.appendChild(text);
+
 function createLoginModal()  {
     console.log('Yo');
+    loginModal.showModal();
+
 }
-createLoginModal();
-    //Create seperate tabs for Signup/Login
+let regModal= document.createElement('dialog');
+document.body.appendChild(regModal);
+let text2=document.createElement('h2');
+text2.textContent=('Working');
+regModal.appendChild(text2);
+
+function createRegModal() {
+    console.log('hey');
+    regModal.showModal();
+}
+
     //Create register username form field
     //Create register password form field
-    //Create register button
+
     //Create login username form field
     //Create login password form field
-    //Create login button
 //Center modal
-//Create backdrop
-//Render to page
+
 //Pass form fields to localstorage
 // function store(){
 //     var name = document.getElementById('name');
