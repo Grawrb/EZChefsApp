@@ -1,8 +1,8 @@
 // HamburgerMenu
 // const apiKey = '1e17ed0415db427d85d0c5c8062f4434'; //created first
-const apiKey = 'f286733a42634bd3b713d9d90285995f'; //created second
+// const apiKey = 'f286733a42634bd3b713d9d90285995f'; //created second
 // apiKey from Rob
-// const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b';
+const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b';
 const hamMenu = document.querySelector(".ham-menu");
 const baseUrl = 'https://api.spoonacular.com/recipes/';
 
