@@ -6,14 +6,17 @@
   list-style: none;
   text-decoration: none;
 }
-.container {
+/* .container {
   color: #6f86ff;
   text-align: center;
   font-size: 50px;
   text-align: center;
   width: 100%;
   margin: 0 auto;
-}
+
+} */
+
+
 main {
   overflow: hidden;
 }
@@ -40,7 +43,7 @@ a:hover {
 
 /* off-screen-menu */
 .off-screen-menu {
-  background-color:#1F2937;
+  background-color:#6C584C;
   height: 100vh;
   width: 100%;
   max-width: 450px;
@@ -86,7 +89,7 @@ a:hover {
 .ham-menu span {
   height: 5px;
   width: 100%;
-  background-color: #6f86ff;
+  background-color: #F0EAD2;
   border-radius: 25px;
   position: absolute;
   left: 50%;
@@ -123,4 +126,25 @@ input[type="text"], button {
   padding: 10px;
   font-size: 16px;
   margin: 10px;
+}
+
+dialog {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  height: 50%;
+  width: 70%;
+}
+
+dialog div {
+  height: 100%;
+  width: 100%;
+  border:#1F2937;
+  border-width: 10px;
+  background: #6f86ff;
+  text-align: center;
+  color: black;
 }
