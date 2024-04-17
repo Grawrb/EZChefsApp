@@ -66,7 +66,7 @@ This application in currently open source and free to use. All API keys used in 
 ### Contributers
 
 -Beth McKinney
-    -Github:
+    -Github: [Macbetthh](https://github.com/macbetthh)
 
 -Tristan Smith
     -Github:
