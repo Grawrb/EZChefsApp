@@ -46,39 +46,38 @@ function displayRecipes(recipes) {
   recipeContainer.innerHTML = ''; // Clear previous recipes
 
   recipes.forEach(function(recipe) {
-      // Fetch recipe summary
-      fetch(`${baseUrl}${recipe.id}/summary?apiKey=${apiKey}`)
-          .then(function(response) {
-              return response.json();
-          })
-          .then(function(summaryData) {
-              console.log("Recipe Summary:", summaryData);
+      console.log("Recipe Object Keys:", Object.keys(recipe)); // Debugging: Print the keys of the recipe object to the console
+      var recipeElement = document.createElement('div');
+      recipeElement.classList.add('recipe');
+      recipeElement.innerHTML = `
+          <h2>${recipe.title}</h2>
+          <img src="${recipe.image}" alt="${recipe.title}">
+          <p>${truncateSummary(recipe.summary)}</p>
+          <button class="see-more-btn" onclick="expandSummary(this)">See More</button>
+      `;
 
-              // Create recipe element
-              var recipeElement = document.createElement('div');
-              recipeElement.classList.add('recipe');
-              recipeElement.innerHTML = '<h2>' + recipe.title + '</h2>' +
-                  '<img src="' + recipe.image + '" alt="' + recipe.title + '">' +
-                  '<p>Summary: ' + summaryData.summary + '</p>';
-
-              // Check if recipe includes readyInMinutes property and it's not null or undefined
-              if (recipe.readyInMinutes != null) {
-                  recipeElement.innerHTML += '<p>Ready in ' + recipe.readyInMinutes + ' minutes</p>';
-              }
-
-              // Add event listener
-              recipeElement.addEventListener('click', function() {
-                  displayRecipeDetails(recipe);
-              });
-
-              // Append recipe element to container
-              recipeContainer.appendChild(recipeElement);
-          })
-          .catch(function(error) {
-              console.error('Error fetching recipe summary:', error);
-          });
+      recipeElement.addEventListener('click', function() {
+          displayRecipeDetails(recipe);
+      });
+      recipeContainer.appendChild(recipeElement);
   });
 }
+
+function truncateSummary(summary) {
+  const maxLength = 150; // Adjust as needed
+  if (summary.length > maxLength) {
+    return summary.slice(0, maxLength) + '...';
+  }
+  return summary;
+}
+
+function expandSummary(button) {
+  var recipeCard = button.closest('.recipe');
+  var summary = recipeCard.querySelector('p');
+  summary.textContent = recipeCard.dataset.fullSummary; // Assuming you have the full summary stored in a data attribute
+  button.style.display = 'none'; // Hide the "see more" button after expanding
+}
+
 
 
 
