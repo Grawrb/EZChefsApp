@@ -25,9 +25,9 @@ footer {
   position: fixed;
 }
 
-.username-display {
+/* .username-display {
   font-size: 50px;
-}
+} */
 
 /* Start of Ham-menu */
 a {
@@ -37,7 +37,7 @@ a:visited {
   color: white;
 }
 a:hover {
-  color: #6f86ff;
+  color: #DDE5B6;
 }
 
 
@@ -62,7 +62,7 @@ a:hover {
 
 .off-screen-menu a {
   text-decoration: none;
-  color: white;
+  color: #F0EAD2;
   display: inline-block;
 }
 
@@ -74,7 +74,7 @@ a:hover {
   cursor: default;
   text-decoration: underline;
   text-underline-offset: 0.5rem;
-  color: white;
+  color: #DDE5B6;
 }
 
 
