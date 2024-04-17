@@ -81,6 +81,7 @@ a:hover {
   height: 50px;
   width: 40px;
   position: relative;
+  z-index: 1;
 }
 .ham-menu span {
   height: 5px;
