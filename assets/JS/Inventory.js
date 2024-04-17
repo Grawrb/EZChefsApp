@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
-  const apiKey = 'f286733a42634bd3b713d9d90285995f'; // Use the most recent API key
+  const apiKey = '1e17ed0415db427d85d0c5c8062f4434'; // Use the most recent API key
   const baseUrl = 'https://api.spoonacular.com/';
   
   function searchInventoryItems() {
