@@ -1,8 +1,10 @@
 // HamburgerMenu
-const apiKey = '1e17ed0415db427d85d0c5c8062f4434'; //created first
+// const apiKey = '1e17ed0415db427d85d0c5c8062f4434'; //created first
 // const apiKey = 'f286733a42634bd3b713d9d90285995f'; //created second
 // apiKey from Rob
 // const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b';
+// second key from Rob
+const apiKey = '8c38d39a17db4dcf8655d154ac2ee3c5'
 const hamMenu = document.querySelector(".ham-menu");
 const baseUrl = 'https://api.spoonacular.com/recipes/';
 const offScreenMenu = document.querySelector(".off-screen-menu");
@@ -86,6 +88,9 @@ function displayRecipes(recipes) {
   });
 }
 function displayModal(recipeId) {
+  // Retrieve the inventory from local storage
+  const inventory = JSON.parse(localStorage.getItem('savedInventory') || '{}');
+
   // Construct the API URL to get detailed information about the recipe using its ID
   var apiUrl = `${baseUrl}${recipeId}/information?apiKey=${apiKey}`;
 
@@ -96,6 +101,24 @@ function displayModal(recipeId) {
     })
     .then(function(data) {
       console.log("Recipe Details:", data); // Log the detailed recipe information for debugging
+      
+      // Check if ingredients are missing
+      const missingIngredients = [];
+      if (data.extendedIngredients) {
+        data.extendedIngredients.forEach(function(ingredient) {
+          const ingredientName = ingredient.name.toLowerCase();
+          const ingredientQty = ingredient.amount;
+
+          // Check if the ingredient is in the inventory and if the quantity is sufficient
+          if (!inventory.hasOwnProperty(ingredientName) || inventory[ingredientName].quantity < ingredientQty) {
+            missingIngredients.push(ingredient.original);
+          }
+        });
+      }
+
+      // Log the missing ingredients array
+      console.log("Missing Ingredients:", missingIngredients);
+
       // Populate the modal with the detailed recipe information
       var modalContent = document.getElementById('modalContent');
       modalContent.innerHTML = `
@@ -110,6 +133,13 @@ function displayModal(recipeId) {
           ${data.extendedIngredients ? data.extendedIngredients.map(ingredient => `<li>${ingredient.original}</li>`).join('') : ''}
         </ul>
       `;
+
+      // Add missing ingredients to the modal
+      if (missingIngredients.length > 0) {
+        modalContent.innerHTML += `<p>You are missing the following ingredients:</p><ul>${missingIngredients.map(ingredient => `<li>${ingredient}</li>`).join('')}</ul>`;
+      } else {
+        modalContent.innerHTML += `<p>You have all the ingredients needed for this recipe!</p>`;
+      }
 
       // Check if the close button already exists
       var closeModalBtn = document.getElementById('closeModalBtn');
@@ -134,6 +164,9 @@ function displayModal(recipeId) {
       console.error('Error fetching recipe details:', error);
     });
 }
+
+
+
 function truncateSummary(summary) {
   const maxLength = 350; // Adjust as needed
   if (typeof summary === 'string' && summary.length > maxLength) {
