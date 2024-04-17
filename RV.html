@@ -1,43 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/CSS/RV.css" />
-  <title>EZ Chef</title>
-</head>
-<body>
-  <div class="container">
-    <div class="username-display">Guests, <span id="username">Recipes</span></div>
-  </div>
-  
-  <div class="off-screen-menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="RV.html">Recipe Viewer</a></li>
-      <li><a href="Recents.html">Recents</a></li>
-      <li><a href="Inventory.html">Inventory</a></li>
-      <li><a href="Scanner.html">Scanner</a></li>
-    </ul>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/CSS/style.css" />
+    <title>EZ Chefs</title>
 
-  <nav>
-    <div class="ez-logo">EZ CHEF</div>
-    <div class="ham-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+  </head>
+
+
+
+
+
+<body class="max-w-screen max-h-screen">
+
+    <header>
+    <nav class="border-umber bg-chamoisee z-20">
+      <div class="min-w-screen-xl flex flex-wrap items-center justify-between p-4">
+        <a href="#" class="justify-self-start flex items-center text-parchment space-x-3 rtl:space-x-reverse hover:text-teagreen">
+          <img src="./assets/images/ezcheflogo.svg" class="h-10" alt="Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap">EZ CHEFS</span>
+      </a>
+
+        <div class="username-display items-center justify-items-center text-parchment font-medium text-lg">Guest <span id="username"> Recipe Searches</span></div>
+      
+
+      <div class="inline-flex items-center justify-end mx-5 space-x-3">
+        <button type="button" class="inline-flex items-center justify-center text-parchment bg-umber hover:bg-teagreen hover:text-chamoisee font-medium rounded-lg text-sm px-10 py-2.5 me-2 mb-2" id="registerBtn">Register</button>
+        <button type="button" class="justify-self-end text-parchment bg-umber hover:bg-teagreen hover:text-chamoisee font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" id="loginBtn">Login</button>
+
+        
+      <div class="justify-items-center justify-self-end ham-menu p-2 w-10 h-10 text-sm text-parchment rounded-lg hover:bg-chamoisee focus:outline-none focus:ring-2 focus:ring-gray-200 z-30" aria-controls="navbar-hamburger" aria-expanded="false"">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="off-screen-menu z-10">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="RV.html">Recipe Viewer</a></li>
+            <li><a href="Recents.html">Recents</a></li>
+            <li><a href="Inventory.html">Inventory</a></li>
+            <li><a href="Scanner.html">Scanner</a></li>
+          </ul>
+        </div>
+
     </div>
-  </nav>
+      </div>
+    </nav>
+  </header>
 
-  <div class="container">
-    <h3>Recipe Search</h3>
-    <input type="text" id="searchInput" placeholder="Enter keyword...">
-    <button onclick="searchRecipes()">Search</button>
-    <div id="recipeResults"></div>
-  </div>
+  <main class="min-h-full min-w-full px-4 mt-20 justify-center">
+  
+    <!-- Recipe Search box-->
+  <div class="flex flex-col items-center bg-parchment border border-teagreen rounded-lg shadow md:flex-row md:max-w-xl m-auto">
+      <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="./assets/images/ezcheflogo.svg" alt="">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-chamoisee">Recipe Search</h5><br>
+          
+            <form class="flex items-center max-w-sm mr-45 space-x-6">   
+
+                <input type="text" id="searchInput" class="ml-0justify-self-start bg-gray-50 border border-umber text-chamoisee text-sm rounded-lg focus:ring-teagreen focus:border-olivine block w-full ps-10 p-2.5" placeholder="Enter recipe name..." required />
+            
+            <button onclick="searchRecipes()" type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-olivine rounded-lg border border-umber hover:bg-olivine focus:ring-4 focus:outline-none focus:ring-teagreen">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+                <span class="sr-only">Search</span>
+            </button>
+        </form>
+        
+
+      </div>
+    </div>
+
+    <hr class="w-full h-1 mx-auto m-20 bg-olivine border-0 rounded">
+
+  <div id="recipeResults"></div>
+
   
   <div id="recipeContainer" class="recipe-container">  
     <!-- Recipe cards will be dynamically added here -->
@@ -50,6 +93,40 @@
     </div>
   </div>
 
-  <script src="./assets/JS/RV.js"></script>
+
+</main>
+
+  <footer class="absolute inset-x-0 bottom-0 bg-chamoisee rounded-lg shadow m-4">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm  text-parchment sm:text-center mx-auto">© 2024 <a href="https://flowbite.com/" class="hover:underline hover:text-teagreen">EZ CHEFS™</a>. All Rights Reserved.
+    </span>
+    
+    </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/script.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        transparent: 'transparent',
+                        current: 'currentColor',
+                        'parchment': '#F0EAD2',
+                        'teagreen': '#DDE5B6',
+                        'olivine': '#ADC178',
+                        'chamoisee': '#A98467',
+                        'umber': '#6C584C',
+                    },
+                }
+            },
+        }
+    </script>
+
+    <script src="./assets/JS/script.js"></script>
+    <script src="./assets/JS/loginModal.js"></script>
+    <script src="./assets/JS/RV.js"></script>
 </body>
 </html>
