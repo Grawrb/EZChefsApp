@@ -123,3 +123,24 @@ input[type="text"], button {
   font-size: 16px;
   margin: 10px;
 }
+
+dialog {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  height: 50%;
+  width: 70%;
+}
+
+dialog div {
+  height: 100%;
+  width: 100%;
+  border:#1F2937;
+  border-width: 10px;
+  background: #6f86ff;
+  text-align: center;
+  color: black;
+}
