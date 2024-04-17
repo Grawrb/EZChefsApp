@@ -46,16 +46,16 @@ regModCon.appendChild(regDesc);
 let registerForm = document.createElement('form');
 regModCon.appendChild(registerForm);
 let userName = document.createElement('input');
-registerForm.appendChild(userName);
+regModCon.appendChild(userName);
 let password = document.createElement('input');
 password.setAttribute('type', 'password');
-registerForm.appendChild(password);
+regModCon.appendChild(password);
 let regBtn = document.createElement('button');
 regBtn.textContent = ('Register');
-registerForm.appendChild(regBtn);
+regModCon.appendChild(regBtn);
 let regCancel = document.createElement('button');
 regCancel.textContent = ('Cancel');
-registerForm.appendChild(regCancel);
+regModCon.appendChild(regCancel);
 
 
 
