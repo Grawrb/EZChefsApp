@@ -6,14 +6,17 @@
   list-style: none;
   text-decoration: none;
 }
-.container {
+/* .container {
   color: #6f86ff;
   text-align: center;
   font-size: 50px;
   text-align: center;
   width: 100%;
   margin: 0 auto;
-}
+
+} */
+
+
 main {
   overflow: hidden;
 }
@@ -40,7 +43,7 @@ a:hover {
 
 /* off-screen-menu */
 .off-screen-menu {
-  background-color:#1F2937;
+  background-color:#6C584C;
   height: 100vh;
   width: 100%;
   max-width: 450px;
@@ -85,7 +88,7 @@ a:hover {
 .ham-menu span {
   height: 5px;
   width: 100%;
-  background-color: #6f86ff;
+  background-color: #F0EAD2;
   border-radius: 25px;
   position: absolute;
   left: 50%;
