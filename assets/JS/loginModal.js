@@ -17,27 +17,20 @@ loginModCon.appendChild(logDesc)
 let loginForm = document.createElement('form');
 loginModCon.appendChild(loginForm);
 let user = document.createElement('input');
-loginForm.appendChild(user);
+loginModCon.appendChild(user);
 let pw = document.createElement('input');
-loginForm.appendChild(pw);
+pw.setAttribute('type', 'password');
+loginModCon.appendChild(pw);
 let logBtn = document.createElement('button');
 logBtn.textContent = ('Login');
-loginForm.appendChild(logBtn);
+loginModCon.appendChild(logBtn);
 let cancelBtn = document.createElement('button');
 cancelBtn.textContent = ('Cancel');
-loginForm.appendChild(cancelBtn);
-
-
+loginModCon.appendChild(cancelBtn);
 
 function createLoginModal()  {
     console.log('Yo');
     loginModal.showModal();
-
-  
-    //Check username and password for previous registration
-    //Store username in localstorage for use on other pages
-    //Title, description, (inputs), buttons
-
 }
 
 let regModal = document.createElement('dialog');
@@ -50,11 +43,12 @@ regModCon.appendChild(regTitle);
 let regDesc = document.createElement('h5');
 regDesc.textContent = ('Pick a username and password');
 regModCon.appendChild(regDesc);
-let registerForm = document.createElement('Form');
+let registerForm = document.createElement('form');
 regModCon.appendChild(registerForm);
 let userName = document.createElement('input');
 registerForm.appendChild(userName);
 let password = document.createElement('input');
+password.setAttribute('type', 'password');
 registerForm.appendChild(password);
 let regBtn = document.createElement('button');
 regBtn.textContent = ('Register');
@@ -64,16 +58,13 @@ regCancel.textContent = ('Cancel');
 registerForm.appendChild(regCancel);
 
 
+
 function createRegModal() {
     console.log('hey');
     regModal.showModal();
 }
-    //Render modal container
-    //Create register username form field
-    //Create register password form field
     //Store registration credentials in local storage
 
-//Center modal
 
 //Pass form fields to localstorage
 // function store(){
