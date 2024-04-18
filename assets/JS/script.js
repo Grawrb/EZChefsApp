@@ -16,3 +16,7 @@ function createHamMenu() {
 createHamMenu();
 console.log("yeah");
 
+fetch('https://baconipsum.com/api/?type=meat-and-filler')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
