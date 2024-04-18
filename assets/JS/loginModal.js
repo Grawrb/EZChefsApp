@@ -6,39 +6,28 @@ loginBtn.addEventListener('click', createLoginModal);
 
 let loginModal = document.createElement('dialog');
 document.body.appendChild(loginModal);
-loginModal.classList.add('w-full', 'max-w-sm');
-
 let loginModCon = document.createElement('div');
-// loginModCon.classList.add('bg-white border border-gray-200 rounded-lg shadow')
 loginModal.appendChild(loginModCon);
-
 let logTitle = document.createElement('h3');
-// logTitle.classList.add('text-xl font-medium text-gray-900 dark:text-white')
 logTitle.textContent = ('Welcome Chefs!');
 loginModCon.appendChild(logTitle);
-
 let logDesc = document.createElement('h5');
 logDesc.textContent = ('Please enter a username and password');
 loginModCon.appendChild(logDesc)
-
 let loginForm = document.createElement('form');
 loginModCon.appendChild(loginForm);
-
 let user = document.createElement('input');
 user.setAttribute('id', "user-name");
 user.setAttribute('placeholder', 'Username');
 loginModCon.appendChild(user);
-
 let pw = document.createElement('input');
 pw.setAttribute('id', 'password');
 pw.setAttribute('type', 'password');
 pw.setAttribute('placeholder', 'Password');
 loginModCon.appendChild(pw);
-
 let logBtn = document.createElement('button');
 logBtn.textContent = ('Login');
 loginModCon.appendChild(logBtn);
-
 let cancelBtn = document.createElement('button');
 cancelBtn.textContent = ('Cancel');
 loginModCon.appendChild(cancelBtn);
@@ -130,7 +119,5 @@ logBtn.addEventListener('click', check);
 cancelBtn.addEventListener('click', function() {
     loginModal.close();
 });
-
-
 
 

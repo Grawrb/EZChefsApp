@@ -3,7 +3,7 @@
 // apiKey from Rob
 // const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b';
 // second key from Rob
-const apiKey = '51ec57aec2de403188c480bc518ced50'
+const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b'
 const hamMenu = document.querySelector(".ham-menu");
 const baseUrl = 'https://api.spoonacular.com/recipes/';
 const offScreenMenu = document.querySelector(".off-screen-menu");
