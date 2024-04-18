@@ -1,11 +1,18 @@
 // HamburgerMenu
-const hamMenu = document.querySelector(".ham-menu");
+// function createHamMenu() {
+//   console.log('yup');
 
-const offScreenMenu = document.querySelector(".off-screen-menu");
+//   const hamMenu = document.querySelector(".ham-menu");
 
-hamMenu.addEventListener("click", () => {
-  hamMenu.classList.toggle("active");
-  offScreenMenu.classList.toggle("active");
-});
+//   const offScreenMenu = document.querySelector(".off-screen-menu");
 
+//   hamMenu.addEventListener("click", () => {
+//     hamMenu.classList.toggle("active");
+//     offScreenMenu.classList.toggle("active");
+//     console.log('wow')
+//   });
+// };
+
+// createHamMenu();
+// console.log("yeah");
 
