@@ -17,9 +17,13 @@ loginModCon.appendChild(logDesc)
 let loginForm = document.createElement('form');
 loginModCon.appendChild(loginForm);
 let user = document.createElement('input');
+user.setAttribute('id', "user-name");
+user.setAttribute('placeholder', 'Username');
 loginModCon.appendChild(user);
 let pw = document.createElement('input');
+pw.setAttribute('id', 'password');
 pw.setAttribute('type', 'password');
+pw.setAttribute('placeholder', 'Password');
 loginModCon.appendChild(pw);
 let logBtn = document.createElement('button');
 logBtn.textContent = ('Login');
@@ -46,9 +50,13 @@ regModCon.appendChild(regDesc);
 let registerForm = document.createElement('form');
 regModCon.appendChild(registerForm);
 let userName = document.createElement('input');
+userName.setAttribute('id', 'newUser');
+userName.setAttribute('placeholder', 'Username');
 regModCon.appendChild(userName);
 let password = document.createElement('input');
+password.setAttribute('id', 'newPassword');
 password.setAttribute('type', 'password');
+password.setAttribute('placeholder', 'Password');
 regModCon.appendChild(password);
 let regBtn = document.createElement('button');
 regBtn.textContent = ('Register');
@@ -63,64 +71,51 @@ function createRegModal() {
     console.log('hey');
     regModal.showModal();
 }
-    //Store registration credentials in local storage
-
 
 //Pass form fields to localstorage
-// function store(){
-//     var name = document.getElementById('name');
-//     var pw = document.getElementById('pw');
+function store(){
 
-//     if (name.value.length == 0 && pw.value.length == 0){
-//         alert('Please fill in email and password');
+    if (userName.value.length == 0 && password.value.length == 0){
+        alert('Please fill in email and password');
     
-//     } else if(name.value.length == 0){
-//         alert('Please fill in email');
+    } else if(userName.value.length == 0){
+        alert('Please fill in email');
     
-//     }else if(pw.value.length == 0){
-//         alert('Please fill in password');
+    }else if(password.value.length == 0){
+        alert('Please fill in password');
     
-//     }else{
-//         localStorage.setItem('name', name.value);
-//         localStorage.setItem('pw', pw.value);
-//         alert('Your account has been created');
-//     }
-//     }
+    }else{
+        localStorage.setItem('name', userName.value);
+        localStorage.setItem('pw', password.value);
+        alert('Your account has been created');
+        regModal.close();
+        userName.value = "";
+        password.value = "";
+    }
+};
+
+    regBtn.addEventListener('click', store);
+    regCancel.addEventListener('click', function() {
+        regModal.close();
+    });
+
 // //Create function to check login for previous signup 
-// function check(){
-//     var storedName = localStorage.getItem('name');
-//     var storedPw = localStorage.getItem('pw');
+function check(){
+    var storedName = localStorage.getItem('name');
+    var storedPw = localStorage.getItem('pw');
     
-//     var userName = document.getElementById('userName');
-//     var userPw = document.getElementById('userPw');
-//     var userRemember = document.getElementById("rememberMe");
-    
-//     if(userName.value == storedName && userPw.value == storedPw){
-//         alert('Welcome back chef!');
-//     }else{
-//         alert('Please Register');
-//     }
-//     }
+ 
+    if(user.value == storedName && pw.value == storedPw){
+        alert('Welcome back chef!');
+        loginModal.close();
+        user.value = "";
+        pw.value = "";
+    }else{
+        alert('Please Register');
+    }
+};
 
-// let userName = document.getElementById('userName');
-// let password = document.getElementById('password');
-// registerBtn.addEventListener('click', function (event) {
-//     event.preventDefault();
-//     if (!userName.value || !password.value) {
-//         alert("Please pick a username AND password");
-//         return;
-//     }
-//     const userCred = {
-//         userName : userName.value,
-//         password : password.value,
-//     };
-
-//     localStorage.setItem('username', userName.value);
-//     localStorage.setItem('password', password.value);
-//     alert("Welcome chef! Let's get cooking");
-// });
-
-// loginBtn.addEventListener('click', function (event) {
-//     event.preventDefault();
-
-// })
+logBtn.addEventListener('click', check);
+cancelBtn.addEventListener('click', function() {
+    loginModal.close();
+});

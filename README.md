@@ -69,10 +69,10 @@ This application in currently open source and free to use. All API keys used in 
     -Github: [Macbetthh](https://github.com/macbetthh)
 
 -Tristan Smith
-    -Github:
+    -Github: [TristanSmith63](https://github.com/TristanSmith63)
 
 -Dayel Przybyla
-    -GitHub:
+    -GitHub: [ddprzy37](https://github.com/ddprzy37)
 
 -Robert Maxfield
     -GitHub: [Grawrb](https://github.com/Grawrb)

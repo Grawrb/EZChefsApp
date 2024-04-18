@@ -12,9 +12,9 @@ main {
   overflow: hidden;
 }
 
-footer {
+/* footer {
   position: fixed;
-}
+} */
 
 /* .username-display {
   font-size: 50px;
@@ -275,6 +275,18 @@ dialog div {
   background: #6C584C;
   text-align: center;
   color: white;
+}
+
+dialog form {
+  justify-content: center;
+  align-content: center;
+}
+
+dialog input {
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+  color: black;
 }
 
 

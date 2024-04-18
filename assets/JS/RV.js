@@ -1,4 +1,3 @@
-// HamburgerMenu
 // const apiKey = '1e17ed0415db427d85d0c5c8062f4434'; //created first
 // const apiKey = 'f286733a42634bd3b713d9d90285995f'; //created second
 // apiKey from Rob
@@ -8,13 +7,16 @@ const apiKey = '8c38d39a17db4dcf8655d154ac2ee3c5'
 const hamMenu = document.querySelector(".ham-menu");
 const baseUrl = 'https://api.spoonacular.com/recipes/';
 const offScreenMenu = document.querySelector(".off-screen-menu");
+const searchRecipeBtn = document.getElementById('searchRecipes');
 
 hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("active");
   offScreenMenu.classList.toggle("active");
 });
 
-function searchRecipes() {
+searchRecipeBtn.addEventListener('click', searchRecipes);
+function searchRecipes(event) {
+  event.preventDefault();
   var query = document.getElementById('searchInput').value.trim();
   var encodedQuery = encodeURIComponent(query); // Encode the search query
   var apiUrl;
