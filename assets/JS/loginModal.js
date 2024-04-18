@@ -4,6 +4,7 @@ let registerBtn = document.getElementById('registerBtn');
 registerBtn.addEventListener('click', createRegModal);
 loginBtn.addEventListener('click', createLoginModal);
 
+//Builds out Login modal in DOM
 let loginModal = document.createElement('dialog');
 document.body.appendChild(loginModal);
 let loginModCon = document.createElement('div');
@@ -32,11 +33,12 @@ let cancelBtn = document.createElement('button');
 cancelBtn.textContent = ('Cancel');
 loginModCon.appendChild(cancelBtn);
 
+//Function to render login modal
 function createLoginModal()  {
-    console.log('Yo');
     loginModal.showModal();
 }
 
+//Builds out Register modal in DOM
 let regModal = document.createElement('dialog');
 document.body.appendChild(regModal);
 let regModCon = document.createElement('div');
@@ -66,9 +68,8 @@ regCancel.textContent = ('Cancel');
 regModCon.appendChild(regCancel);
 
 
-
+//Function to render register modal
 function createRegModal() {
-    console.log('hey');
     regModal.showModal();
 }
 
@@ -76,10 +77,10 @@ function createRegModal() {
 function store(){
 
     if (userName.value.length == 0 && password.value.length == 0){
-        alert('Please fill in email and password');
+        alert('Please fill in username and password');
     
     } else if(userName.value.length == 0){
-        alert('Please fill in email');
+        alert('Please fill in username');
     
     }else if(password.value.length == 0){
         alert('Please fill in password');
@@ -94,12 +95,13 @@ function store(){
     }
 };
 
+//Store username and password in local storage then closes modal
     regBtn.addEventListener('click', store);
     regCancel.addEventListener('click', function() {
         regModal.close();
     });
 
-// //Create function to check login for previous signup 
+//Create function to check login for previous signup 
 function check(){
     var storedName = localStorage.getItem('name');
     var storedPw = localStorage.getItem('pw');
@@ -115,6 +117,7 @@ function check(){
     }
 };
 
+//Checks for username and password in local storage then closes modal
 logBtn.addEventListener('click', check);
 cancelBtn.addEventListener('click', function() {
     loginModal.close();
