@@ -3,7 +3,7 @@
 // apiKey from Rob
 // const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b';
 // second key from Rob
-const apiKey = '8c38d39a17db4dcf8655d154ac2ee3c5'
+const apiKey = '51ec57aec2de403188c480bc518ced50'
 const hamMenu = document.querySelector(".ham-menu");
 const baseUrl = 'https://api.spoonacular.com/recipes/';
 const offScreenMenu = document.querySelector(".off-screen-menu");
@@ -67,6 +67,8 @@ function displayRecipes(recipes) {
           
           <p class="full-summary" style="display: none;">${summaryData.summary}</p> <!-- Hidden full summary -->
         `;
+        
+
 
         // Add event listener to the "See Recipe" button
         var seeRecipeBtn = recipeElement.querySelector('.see-recipe-btn');
@@ -175,7 +177,7 @@ function truncateSummary(summary) {
   const maxLength = 350; // Adjust as needed
   if (typeof summary === 'string' && summary.length > maxLength) {
     var truncatedSummary = summary.slice(0, maxLength) + '...';
-    var seeMoreButton = '<button class="see-more-btn">See Mor2</button>';
+    var seeMoreButton = '<button class="see-more-btn">See More</button>';
     var fullSummary = '<span class="full-summary" style="display: none">' + summary + '</span>';
     return truncatedSummary + seeMoreButton + fullSummary;
   } else {

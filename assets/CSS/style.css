@@ -32,14 +32,7 @@ a:hover {
 }
 
 
-/* .container {
-  color: #6f86ff;
-  text-align: center;
-  font-size: 50px;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-} */
+
 
 
 /* off-screen-menu */
@@ -122,12 +115,7 @@ a:hover {
 }
 
 
-/*recipe search bar css*/
-input[type="text"], button {
-  padding: 10px;
-  font-size: 16px;
-  margin: 10px;
-}
+
 
 .search-container {
   margin: 20px;
@@ -190,7 +178,7 @@ input[type="text"], button {
 }
 
 .recipe {
-width: 30%; /* Adjust as needed */
+width: 100%; /* Adjust as needed */
 display: inline-block;
 margin: 10px; /* Adjust spacing between recipes */
 padding: 10px;
@@ -261,7 +249,7 @@ dialog {
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   height: fit-content;
-  width: 70%;
+  /* width: 70%; */
 }
 
 dialog div {
@@ -299,20 +287,7 @@ dialog input {
 
 
 
-.recipe {
-  width: 30%; /* Adjust as needed */
-  display: inline-block;
-  margin: 10px; /* Adjust spacing between recipes */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  }
-  
-  .recipe img {
-  max-width: 100%;
-  display: inline-flex ;
-  height: auto;
-  }
+
   
   .logo-and-search {
   display: flex;
