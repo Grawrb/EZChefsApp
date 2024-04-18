@@ -1,4 +1,4 @@
-// HamburgerMenu
+//HamburgerMenu
 // function createHamMenu() {
 //   console.log('yup');
 
