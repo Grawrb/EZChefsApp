@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // API key and base URL configuration.
-const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b';
+const apiKey = '1884e65b100a493caf2f4d7d0a9169de';
 const baseUrl = 'https://api.spoonacular.com/';
 
 // Function to handle searching of inventory items using an API call.
