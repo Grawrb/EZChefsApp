@@ -1,18 +1,18 @@
-// HamburgerMenu
-// function createHamMenu() {
-//   console.log('yup');
+//HamburgerMenu
+function createHamMenu() {
+  console.log('yup');
 
-//   const hamMenu = document.querySelector(".ham-menu");
+  const hamMenu = document.querySelector(".ham-menu");
 
-//   const offScreenMenu = document.querySelector(".off-screen-menu");
+  const offScreenMenu = document.querySelector(".off-screen-menu");
 
-//   hamMenu.addEventListener("click", () => {
-//     hamMenu.classList.toggle("active");
-//     offScreenMenu.classList.toggle("active");
-//     console.log('wow')
-//   });
-// };
+  hamMenu.addEventListener("click", () => {
+    hamMenu.classList.toggle("active");
+    offScreenMenu.classList.toggle("active");
+    console.log('wow')
+  });
+};
 
-// createHamMenu();
-// console.log("yeah");
+createHamMenu();
+console.log("yeah");
 

@@ -9,6 +9,8 @@ const baseUrl = 'https://api.spoonacular.com/recipes/';
 const offScreenMenu = document.querySelector(".off-screen-menu");
 const searchRecipeBtn = document.getElementById('searchRecipes');
 
+
+
 hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("active");
   offScreenMenu.classList.toggle("active");
