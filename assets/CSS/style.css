@@ -129,6 +129,8 @@ input[type="text"], button {
   margin: 10px;
 }
 
+/* Styling for login and register modals */
+
 dialog {
   top: 50%;
   left: 50%;
@@ -136,19 +138,23 @@ dialog {
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  height: 50%;
+  height: fit-content;
   width: 70%;
 }
 
 dialog div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: 100%;
   width: 100%;
   border:#1F2937;
   border-width: 10px;
-  background: #6f86ff;
+  background: #6C584C;
   text-align: center;
-  color: black;
+  color: white;
 }
+
 
 
 #recipeResults {
