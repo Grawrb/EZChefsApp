@@ -3,7 +3,7 @@
 // apiKey from Rob
 // const apiKey = 'e39ce1142e7844e183e7bd8ef27af21b';
 // second key from Rob
-const apiKey = '8c38d39a17db4dcf8655d154ac2ee3c5'
+const apiKey = '51ec57aec2de403188c480bc518ced50'
 const hamMenu = document.querySelector(".ham-menu");
 const baseUrl = 'https://api.spoonacular.com/recipes/';
 const offScreenMenu = document.querySelector(".off-screen-menu");
@@ -68,17 +68,7 @@ function displayRecipes(recipes) {
           <p class="full-summary" style="display: none;">${summaryData.summary}</p> <!-- Hidden full summary -->
         `;
         
-        // style I'd like to test with tailwind applied
-        //var recipeElement = document.createElement('div');
-        // recipeElement.classList.add('max-w-sm', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'recipe');
-    //     recipeElement.innerHTML = `
-    //       <img class="rounded-t-lg" src="${recipe.image}" alt="${recipe.title}" />
-    //       <div class="p-5">
-    //         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${recipe.title}</h5>
-    //          <button type="button" class="see-recipe-btn inline-flex items-center text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">See Recipe</button>
-    //         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 overflow-auto hover:overflow-scroll">${truncateSummary(summaryData.summary)}</p>
-    //     </div>
-    // `;
+
 
         // Add event listener to the "See Recipe" button
         var seeRecipeBtn = recipeElement.querySelector('.see-recipe-btn');
@@ -187,7 +177,7 @@ function truncateSummary(summary) {
   const maxLength = 350; // Adjust as needed
   if (typeof summary === 'string' && summary.length > maxLength) {
     var truncatedSummary = summary.slice(0, maxLength) + '...';
-    var seeMoreButton = '<button class="see-more-btn">See Mor2</button>';
+    var seeMoreButton = '<button class="see-more-btn">See More</button>';
     var fullSummary = '<span class="full-summary" style="display: none">' + summary + '</span>';
     return truncatedSummary + seeMoreButton + fullSummary;
   } else {

@@ -115,12 +115,7 @@ a:hover {
 }
 
 
-/* recipe search bar css
-input[type="text"], button {
-  padding: 10px;
-  font-size: 16px;
-  margin: 10px;
-} */
+
 
 .search-container {
   margin: 20px;
@@ -183,7 +178,7 @@ input[type="text"], button {
 }
 
 .recipe {
-width: 30%; /* Adjust as needed */
+width: 100%; /* Adjust as needed */
 display: inline-block;
 margin: 10px; /* Adjust spacing between recipes */
 padding: 10px;
@@ -292,20 +287,7 @@ dialog input {
 
 
 
-.recipe {
-  width: 30%; /* Adjust as needed */
-  display: inline-block;
-  margin: 10px; /* Adjust spacing between recipes */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  }
-  
-  .recipe img {
-  max-width: 100%;
-  display: inline-flex ;
-  height: auto;
-  }
+
   
   .logo-and-search {
   display: flex;
