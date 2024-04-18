@@ -254,7 +254,7 @@ dialog {
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   height: fit-content;
-  width: 70%;
+  /* width: 70%; */
 }
 
 dialog div {
