@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemName = event.target.dataset.itemName;
             
             console.log(event.target.parentElement);
-           
+
             const ingredientElement = event.target.parentElement;
             
             const itemImage = ingredientElement.childNodes[1].src
@@ -35,12 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // API key and base URL configuration.
-const apiKey = 'f3c21f31074f43ae866f0173128e755e';
+const apiKey = '1884e65b100a493caf2f4d7d0a9169de';
 const baseUrl = 'https://api.spoonacular.com/';
 
 // Function to handle searching of inventory items using an API call.
-function searchInventoryItems() {
+function searchInventoryItems(event) {
+    event.preventDefault();
+
     const query = document.getElementById('inventorySearchInput').value.trim();
+    console.log("query");
     if (query) {
         const encodedQuery = encodeURIComponent(query);
         const apiUrl = `${baseUrl}food/ingredients/search?query=${encodedQuery}&apiKey=${apiKey}&number=15`;
@@ -59,11 +62,14 @@ function displayInventoryItems(items) {
     const inventoryContainer = document.getElementById('inventoryContainer');
     if (inventoryContainer) {
         inventoryContainer.innerHTML = items.map(item => `
-            <div class="ingredient">
-                <img src="https://spoonacular.com/cdn/ingredients_100x100/${item.image}" alt="${item.name}">
-                <p>${item.name}</p>
-                <input type="number" value="1" min="1" id="qty-${item.id}">
-                <button data-item-id="${item.id}" data-item-name="${item.name}">Save</button>
+            <div class="ingredient grid grid-rows-3 grid-flow-col gap-4 items-center bg-parchment border border-teagreen rounded-lg shadow md:w-2/6 m-auto">
+                <img class="justify-self-center row-span-3 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://spoonacular.com/cdn/ingredients_100x100/${item.image}" alt="${item.name}">
+
+                    <h2 class="mb-2 text-2xl mx-auto font-bold tracking-tight text-chamoisee" >${item.name}</h2>
+                    <div class="row-span-2 col-span-2">
+                        <input type="number" value="1" min="1" class="w-20 text-umber" id="qty-${item.id}">
+                        <button data-item-id="${item.id}" data-item-name="${item.name}" class="mt-3 text-parchment bg-umber hover:bg-teagreen hover:text-chamoisee font-medium rounded-lg text-sm px-10 py-2.5 me-2 mb-2">Save</button>
+                    </div>
             </div>
         `).join('');
     } else {
