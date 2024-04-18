@@ -8,6 +8,7 @@ The EZ Chefs application is an all-in-one application for aspiring home chefs. T
     -User Story
     -Resources used in development
     -Installation / Operation
+    -Screen shot of deployed application
     -Planned feature additions
     -Permissions
     -Contributers
@@ -48,6 +49,12 @@ The EZ Chefs application is an all-in-one application for aspiring home chefs. T
 ## Installation / Operation
 
 No installation should be required. This is a web based application that should run within all modern browsers. This application can also be run from a mobile device. Simply navigate to the included link. It is recommended that users register using the "Register" button on the landing page. This will allow users to save their personal pantry information and filter searches based on ingredients they allow possess. All data enterd in both the Login/Register process and pantry inventory is stored client side at this time.
+
+
+## Screenshot of deployed application
+
+    ![EZ Chefs Screenshot](/bootcamp/project-1/assets/images/Screenshot%202024-04-18%20at%203.16.00 PM.png?raw=true "Screenshot")
+
 
 
 ## Planned feature additions
