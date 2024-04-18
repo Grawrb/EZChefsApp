@@ -55,11 +55,10 @@
       </nav>
   
   </header>
- <!-- Inventory Search -->
- <div class="search-container">
-  <input type="text" id="inventorySearchInput" placeholder="Search for inventory items...">
-  <button id="inventorySearchButton">Search</button>
-</div>
+  <input id="inventorySearchInput" type="text" placeholder="Search for ingredients">
+<button id="inventorySearchButton">Search</button>
+<div id="inventoryContainer"></div>
+<div id="savedItemsContainer"></div>
 
   <main class="min-h-full min-w-full px-4 mt-20">
 
@@ -82,7 +81,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/script.js"></script>
+  
   <script>
       tailwind.config = {
           theme: {
