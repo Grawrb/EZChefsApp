@@ -1,38 +1,70 @@
-let userName=document.getElementById('userName');
-let loginBtn=document.getElementById('loginBtn');
+let loginBtn = document.getElementById('loginBtn');
 let registerBtn = document.getElementById('registerBtn');
 
 registerBtn.addEventListener('click', createRegModal);
 loginBtn.addEventListener('click', createLoginModal);
 
-let loginModal= document.createElement('dialog');
+let loginModal = document.createElement('dialog');
 document.body.appendChild(loginModal);
-let text=document.createElement('h1');
-text.textContent=('Working?');
-loginModal.appendChild(text);
+let loginModCon = document.createElement('div');
+loginModal.appendChild(loginModCon);
+let logTitle = document.createElement('h3');
+logTitle.textContent = ('Welcome Chefs!');
+loginModCon.appendChild(logTitle);
+let logDesc = document.createElement('h5');
+logDesc.textContent = ('Please enter a username and password');
+loginModCon.appendChild(logDesc)
+let loginForm = document.createElement('form');
+loginModCon.appendChild(loginForm);
+let user = document.createElement('input');
+loginModCon.appendChild(user);
+let pw = document.createElement('input');
+pw.setAttribute('type', 'password');
+loginModCon.appendChild(pw);
+let logBtn = document.createElement('button');
+logBtn.textContent = ('Login');
+loginModCon.appendChild(logBtn);
+let cancelBtn = document.createElement('button');
+cancelBtn.textContent = ('Cancel');
+loginModCon.appendChild(cancelBtn);
 
 function createLoginModal()  {
     console.log('Yo');
     loginModal.showModal();
-
 }
-let regModal= document.createElement('dialog');
+
+let regModal = document.createElement('dialog');
 document.body.appendChild(regModal);
-let text2=document.createElement('h2');
-text2.textContent=('Working');
-regModal.appendChild(text2);
+let regModCon = document.createElement('div');
+regModal.appendChild(regModCon);
+let regTitle = document.createElement('h3');
+regTitle.textContent = ('Ready to get cooking?');
+regModCon.appendChild(regTitle);
+let regDesc = document.createElement('h5');
+regDesc.textContent = ('Pick a username and password');
+regModCon.appendChild(regDesc);
+let registerForm = document.createElement('form');
+regModCon.appendChild(registerForm);
+let userName = document.createElement('input');
+regModCon.appendChild(userName);
+let password = document.createElement('input');
+password.setAttribute('type', 'password');
+regModCon.appendChild(password);
+let regBtn = document.createElement('button');
+regBtn.textContent = ('Register');
+regModCon.appendChild(regBtn);
+let regCancel = document.createElement('button');
+regCancel.textContent = ('Cancel');
+regModCon.appendChild(regCancel);
+
+
 
 function createRegModal() {
     console.log('hey');
     regModal.showModal();
 }
+    //Store registration credentials in local storage
 
-    //Create register username form field
-    //Create register password form field
-
-    //Create login username form field
-    //Create login password form field
-//Center modal
 
 //Pass form fields to localstorage
 // function store(){
@@ -72,9 +104,6 @@ function createRegModal() {
 
 // let userName = document.getElementById('userName');
 // let password = document.getElementById('password');
-// let loginBtn = document.getElementById('loginBtn');
-// let registerBtn = document.getElementById('registerBtn');
-
 // registerBtn.addEventListener('click', function (event) {
 //     event.preventDefault();
 //     if (!userName.value || !password.value) {

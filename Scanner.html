@@ -3,36 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/CSS/style.css" />
-    <title>EZ Chef</title>
-    <div class="container">
-      <div class="username-display">Guests, <span id="username">Scanner Tool</span></div>
-      </div>
-    
-    
-  </head>
-  <body>
-    <div class="off-screen-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="RV.html">Recipe Viewer</a></li>
-        <li><a href="Recents.html">Recents</a></li>
-        <li><a href="Inventory.html">Inventory</a></li>
-        <li><a href="Scanner.html">Scanner</a></li>
-      </ul>
-    </div>
+    <title>EZ Chefs</title>
 
-    <nav>
-      <div class="ez-logo">EZ CHEF</div>
-      <div class="ham-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+  </head>
+
+
+
+
+  <body class="max-w-screen max-h-screen">
+
+    <header>
+    <nav class="border-umber bg-chamoisee z-20">
+      <div class="min-w-screen-xl flex flex-wrap items-center justify-between p-4">
+        <a href="#" class="justify-self-start flex items-center text-parchment space-x-3 rtl:space-x-reverse hover:text-teagreen">
+          <img src="./assets/images/ezcheflogo.svg" class="h-10" alt="Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap">EZ CHEFS</span>
+      </a>
+
+        <div class="username-display items-center justify-items-center text-parchment font-medium text-lg">EZ Chef's <span id="username"> Scanner Tool</span></div>
+      
+
+      <div class="inline-flex items-center justify-end mx-5 space-x-3">
+        <button type="button" class="inline-flex items-center justify-center text-parchment bg-umber hover:bg-teagreen hover:text-chamoisee font-medium rounded-lg text-sm px-10 py-2.5 me-2 mb-2" id="registerBtn">Register</button>
+        <button type="button" class="justify-self-end text-parchment bg-umber hover:bg-teagreen hover:text-chamoisee font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" id="loginBtn">Login</button>
+
+        
+      <div class="justify-items-center justify-self-end ham-menu p-2 w-10 h-10 text-sm text-parchment rounded-lg hover:bg-chamoisee focus:outline-none focus:ring-2 focus:ring-gray-200 z-30" aria-controls="navbar-hamburger" aria-expanded="false"">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="off-screen-menu z-10">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="RV.html">Recipe Viewer</a></li>
+            <li><a href="Recents.html">Recents</a></li>
+            <li><a href="Inventory.html">Inventory</a></li>
+            <li><a href="Scanner.html">Scanner</a></li>
+          </ul>
+        </div>
+
+    </div>
       </div>
     </nav>
+  </header>
 
-    <script src="assets/JS/script.js"></script>
+
+
+    <main class="min-h-full min-w-full px-4 mt-20">
+
+
+
+    </main>
+
+    <footer class="absolute inset-x-0 bottom-0 bg-chamoisee rounded-lg shadow m-4">
+      <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm  text-parchment sm:text-center mx-auto">© 2024 <a href="https://flowbite.com/" class="hover:underline hover:text-teagreen">EZ CHEFS™</a>. All Rights Reserved.
+      </span>
+      
+      </div>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="assets/script.js"></script>
+      <script>
+          tailwind.config = {
+              theme: {
+                  extend: {
+                      colors: {
+                          transparent: 'transparent',
+                          current: 'currentColor',
+                          'parchment': '#F0EAD2',
+                          'teagreen': '#DDE5B6',
+                          'olivine': '#ADC178',
+                          'chamoisee': '#A98467',
+                          'umber': '#6C584C',
+                      },
+                  }
+              },
+          }
+      </script>
+    <script src="./assets/JS/script.js"></script>
+    <script src="./assets/JS/loginModal.js"></script>
+    
+    <script src="./assets/JS/Scanner.js"></script>
   </body>
 </html>
