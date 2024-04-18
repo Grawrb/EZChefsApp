@@ -32,14 +32,7 @@ a:hover {
 }
 
 
-/* .container {
-  color: #6f86ff;
-  text-align: center;
-  font-size: 50px;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-} */
+
 
 
 /* off-screen-menu */
@@ -122,12 +115,12 @@ a:hover {
 }
 
 
-/*recipe search bar css*/
+/* recipe search bar css
 input[type="text"], button {
   padding: 10px;
   font-size: 16px;
   margin: 10px;
-}
+} */
 
 dialog {
   top: 50%;
@@ -145,7 +138,7 @@ dialog div {
   width: 100%;
   border:#1F2937;
   border-width: 10px;
-  background: #6f86ff;
+  background: #A98467;
   text-align: center;
   color: black;
 }

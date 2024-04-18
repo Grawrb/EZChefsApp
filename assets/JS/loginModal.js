@@ -33,7 +33,6 @@ function createLoginModal()  {
     console.log('Yo');
     loginModal.showModal();
 
-  
     //Check username and password for previous registration
     //Store username in localstorage for use on other pages
     //Title, description, (inputs), buttons
