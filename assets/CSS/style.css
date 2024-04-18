@@ -12,9 +12,9 @@ main {
   overflow: hidden;
 }
 
-footer {
+/* footer {
   position: fixed;
-}
+} */
 
 /* .username-display {
   font-size: 50px;
@@ -122,6 +122,130 @@ input[type="text"], button {
   margin: 10px;
 } */
 
+.search-container {
+  margin: 20px;
+  text-align: center;
+}
+
+#search-input {
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+#search-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #6f86ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.ingredient {
+  text-align: center;
+  padding: 10px;
+  background-color: #42465d;
+  color: white;
+  border-radius: 10px;
+}
+
+.ingredient img {
+  max-width: 100px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+#savedItemsContainer {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#inventoryContainer img, #savedItemsContainer img {
+  width: 100px;  /* Adjust size as necessary */
+  height: auto;
+}
+
+#recipeResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe {
+width: 30%; /* Adjust as needed */
+display: inline-block;
+margin: 10px; /* Adjust spacing between recipes */
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.recipe img {
+max-width: 100%;
+display: inline-flex ;
+height: auto;
+}
+
+.logo-and-search {
+display: flex;
+align-items: center;
+margin-right: auto; /* Pushes the search box and logo to the left */
+}
+
+#searchInput {
+margin-right: 10px; /* Adds space between search input and button */
+}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+.modal-content img {
+max-width: 100%;
+height: auto;
+}
+
+/* CSS to style the close button */
+#closeModalBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Styling for login and register modals */
+
 dialog {
   top: 50%;
   left: 50%;
@@ -129,19 +253,35 @@ dialog {
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  height: 50%;
+  height: fit-content;
   width: 70%;
 }
 
 dialog div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: 100%;
   width: 100%;
   border:#1F2937;
   border-width: 10px;
-  background: #A98467;
+  background: #6C584C;
   text-align: center;
+  color: white;
+}
+
+dialog form {
+  justify-content: center;
+  align-content: center;
+}
+
+dialog input {
+  width: 50%;
+  justify-self: center;
+  align-self: center;
   color: black;
 }
+
 
 
 #recipeResults {

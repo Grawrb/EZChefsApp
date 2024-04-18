@@ -65,7 +65,7 @@
 
                 <input type="text" id="searchInput" class="ml-0justify-self-start bg-gray-50 border border-umber text-chamoisee text-sm rounded-lg focus:ring-teagreen focus:border-olivine block w-full ps-10 p-2.5" placeholder="Enter recipe name..." required />
             
-            <button onclick="searchRecipes()" type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-olivine rounded-lg border border-umber hover:bg-olivine focus:ring-4 focus:outline-none focus:ring-teagreen">
+            <button id="searchRecipes" type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-olivine rounded-lg border border-umber hover:bg-olivine focus:ring-4 focus:outline-none focus:ring-teagreen">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                 </svg>
@@ -97,7 +97,7 @@
 
 </main>
 
-  <footer class="absolute inset-x-0 bottom-0 bg-chamoisee rounded-lg shadow m-4">
+  <footer class="fixed inset-x-0 bottom-0 bg-chamoisee rounded-lg shadow m-4">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
       <span class="text-sm  text-parchment sm:text-center mx-auto">© 2024 <a href="https://flowbite.com/" class="hover:underline hover:text-teagreen">EZ CHEFS™</a>. All Rights Reserved.
     </span>
@@ -107,7 +107,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/script.js"></script>
     <script>
         tailwind.config = {
             theme: {
