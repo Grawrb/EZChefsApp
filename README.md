@@ -2,7 +2,7 @@
 
 The EZ Chefs application is an all-in-one application for aspiring home chefs. The application includes access to over 1000 recipes you can make in your own kitchen. You can search for recipes by simple keywords such as "pizza" or "tacos", or more specific searches for particular dishes like "pasta carbonara" or "coconut curry". Further search parameters can be included for particular dietary restrictions or time needed to prepare. The application returns up to 15 recipe cards per search. These recipe cards include an image of the dish and nutritional facts. When a recipe card is clicked, a modal window is displayed with your selected recipe. Everyone can produce restaurant quality meals at home with EZ Chefs!
 [EZ Chefs](https://grawrb.github.io/EZChefsApp/)
-![EZ Chefs Logo](/bootcamp/project-1/assets/images/ezcheflogo.svg)
+![EZ Chefs Logo](/bootcamp/project-1/assets/images/ezchef_logo_png.png)
 
 ## Table of Contents
     -User Story
@@ -42,7 +42,7 @@ The EZ Chefs application is an all-in-one application for aspiring home chefs. T
 ## Resources used in development
 
     -Spoonacular API
-    -Baconmockup API
+    -Bacon Ipsum API
     -Tailwind CSS CDN
 
 
