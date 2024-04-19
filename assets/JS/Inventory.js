@@ -87,7 +87,7 @@ function saveInventoryItem(itemId, itemName, itemImage) {
         savedItems[itemId] = { name: itemName, quantity: quantity, image: itemImage };
         localStorage.setItem('savedInventory', JSON.stringify(savedItems));
         console.log(`${itemName}: QTY ${quantity} saved to your inventory!`);
-        alert(`${itemName}: QTY ${quantity} saved to your inventory!`);
+        // alert(`${itemName}: QTY ${quantity} saved to your inventory!`);
         displaySavedInventoryItems();
     } else {
         console.error(`Element with id "qty-${itemId}" not found.`);
