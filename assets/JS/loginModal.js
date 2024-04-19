@@ -77,18 +77,18 @@ function createRegModal() {
 function store(){
 
     if (userName.value.length == 0 && password.value.length == 0){
-        alert('Please fill in username and password');
+        // alert('Please fill in username and password');
     
     } else if(userName.value.length == 0){
-        alert('Please fill in username');
+        // alert('Please fill in username');
     
     }else if(password.value.length == 0){
-        alert('Please fill in password');
+        // alert('Please fill in password');
     
     }else{
         localStorage.setItem('name', userName.value);
         localStorage.setItem('pw', password.value);
-        alert('Your account has been created');
+        // alert('Your account has been created');
         regModal.close();
         userName.value = "";
         password.value = "";
@@ -108,12 +108,12 @@ function check(){
     
 
     if(user.value == storedName && pw.value == storedPw){
-        alert('Welcome back chef!');
+        // alert('Welcome back chef!');
         loginModal.close();
         user.value = "";
         pw.value = "";
-    }else{
-        alert('Please Register');
+    // }else{
+    //     alert('Please Register');
     }
 };
 
