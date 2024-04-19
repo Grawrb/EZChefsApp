@@ -53,7 +53,7 @@ No installation should be required. This is a web based application that should 
 
 ## Screenshot of deployed application
 
-    ![EZ Chefs Screenshot}(https://github.com/Grawrb/EZChefsApp/blob/main/assets/images/Screenshot%202024-04-18%20at%203.16.00%E2%80%AFPM.png) "Screenshot")
+![EZ Chefs Screenshot}(https://github.com/Grawrb/EZChefsApp/blob/main/assets/images/Screenshot%202024-04-18%20at%203.16.00%E2%80%AFPM.png) "Screenshot")
 
 
 
