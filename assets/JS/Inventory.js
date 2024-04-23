@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const ingredientElement = event.target.parentElement;
             
-            const itemImage = ingredientElement.childNodes[1].src
+            const itemImage = ingredientElement.parentElement.childNodes[1].src
             console.log(itemImage);
             
             
@@ -79,6 +79,7 @@ function displayInventoryItems(items) {
 
 // Function to save an inventory item to local storage, including the image URL.
 function saveInventoryItem(itemId, itemName, itemImage) {
+    console.log(itemImage)
     console.log('Attempting to save item:', itemId, itemName);
     const qtyInput = document.getElementById(`qty-${itemId}`);
     if (qtyInput) {
